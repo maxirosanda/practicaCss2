@@ -11,8 +11,15 @@ $nav :(
 .nav{
     background-color: map-get($nav , fondo );
     display:map-get($nav , display );
+    flex-direction: row;
+    justify-content: space-between;
     ul{
+        width: 100%;
         list-style: map-get($nav , listaEstilo );
+        text-align: center;
+        display: none;
+        order: 2;
+        
         li{
             padding: map-get($nav , liPadding );
             a{
@@ -22,26 +29,55 @@ $nav :(
             }
         }
     }
- 
+    .menu {
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        display: flex;
+        order: 1;
+        align-items: center;
+    }
+    input{
+        display: none;
+        &:checked + ul{
+            
+            display: flex;
+            flex-direction: column;
+        
+        }
+    }
+    
+    
+   
 }
 .logo{
     width: 150px;
-  
-     img{
-            width: 100%;
-        }
+    img{
+        width: 100%;
+      }
+   
+}
         
     
-}
+
 
 @media(min-width:768px){
 
     .nav {
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
+        .menu{
+            display: none;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+            width: auto;
+        }
     }
-    ul{
-        display: flex;
-        margin-right: 10px;
+   
+    
     }
-}
+   

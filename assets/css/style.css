@@ -19,9 +19,15 @@ body {
 .nav {
   background-color: rgb(0, 0, 0);
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .nav ul {
+  width: 100%;
   list-style: none;
+  text-align: center;
+  display: none;
+  order: 2;
 }
 .nav ul li {
   padding: 10px;
@@ -30,6 +36,21 @@ body {
   text-decoration: none;
   color: white;
   font-size: 24px;
+}
+.nav .menu {
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  display: flex;
+  order: 1;
+  align-items: center;
+}
+.nav input {
+  display: none;
+}
+.nav input:checked + ul {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -43,11 +64,16 @@ body {
   .nav {
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
-
-  ul {
+  .nav .menu {
+    display: none;
+  }
+  .nav ul {
     display: flex;
+    flex-direction: row;
     margin-right: 10px;
+    width: auto;
   }
 }
 .contactos, .footer .contactosFooter {
@@ -145,36 +171,6 @@ body {
 .precio p {
   margin: 15px 0px;
 }
-.footer {
-  background-color: black;
-}
-.footer .infoEmpresa {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer .infoEmpresa p {
-  width: 50%;
-  color: white;
-  text-align: center;
-}
-.footer .contactosFooter {
-  color: white;
-  justify-content: start;
-  padding-left: 32px;
-}
-
-@media (min-width: 768px) {
-  .footer .infoEmpresa {
-    width: 70%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .footer .infoEmpresa p {
-    text-align: start;
-  }
-}
 form {
   display: flex;
   flex-wrap: nowrap;
@@ -241,5 +237,35 @@ form input[type=submit] {
   form .mensaje textarea {
     width: 90%;
     margin: auto;
+  }
+}
+.footer {
+  background-color: black;
+}
+.footer .infoEmpresa {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .infoEmpresa p {
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+.footer .contactosFooter {
+  color: white;
+  justify-content: start;
+  padding-left: 32px;
+}
+
+@media (min-width: 768px) {
+  .footer .infoEmpresa {
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer .infoEmpresa p {
+    text-align: start;
   }
 }/*# sourceMappingURL=style.css.map */

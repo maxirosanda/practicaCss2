@@ -1,0 +1,67 @@
+form{
+    @include flexbox(column,nowrap,start,strecht);
+    margin-bottom: 20px;
+    h2{
+        color: white;
+        font-size: 32px;
+        text-align: center;
+        padding: 20px;
+    }
+    .datos{
+        @include flexbox(column,nowrap,space-around,strecht);
+    }
+    .ingresoDatos{
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0);
+        border:0;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        &::placeholder{
+            color: #fff;
+            font-size: 16px;
+        }
+        &:focus{
+            border:0;
+            border-bottom: 2px solid #fff;
+        }
+    }
+    
+    .mensaje{
+        @include flexbox(column,nowrap,start,strecht);
+        padding: 25px;
+        textarea{
+            @extend .ingresoDatos;
+        }
+        label{
+            color: #fff;
+            font-size: 24px;
+            padding: 15px
+        }
+    }
+    input[type="submit"]{
+        @extend .button;
+        width: 90%;
+        margin: auto;
+    }
+
+}
+
+@media (min-width:768px) {
+    form{
+        .datos{
+            flex-direction: row
+        }
+        .ingresoDatos{
+            width: 45%;
+        }
+        .mensaje {
+            textarea{
+                width: 90%;
+                margin: auto
+            }
+        }
+    }
+   
+};
