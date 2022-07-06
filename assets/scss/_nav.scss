@@ -13,12 +13,14 @@ $nav :(
     display:map-get($nav , display );
     flex-direction: row;
     justify-content: space-between;
-    ul{
+    .menuNav{
         width: 100%;
+        opacity: 0;
         list-style: map-get($nav , listaEstilo );
         text-align: center;
-        display: none;
         order: 2;
+        position: fixed;
+        transition: all .05s;
         
         li{
             padding: map-get($nav , liPadding );
@@ -39,24 +41,22 @@ $nav :(
     }
     input{
         display: none;
-        &:checked + ul{
-            
-            display: flex;
-            flex-direction: column;
+        &:checked + .menuNav{
+           opacity: 1;
         
         }
     }
     
-    
+    .logo{
+        width: 150px;
+        img{
+            width: 100%;
+          }
+       
+    }
    
 }
-.logo{
-    width: 150px;
-    img{
-        width: 100%;
-      }
-   
-}
+
         
     
 
