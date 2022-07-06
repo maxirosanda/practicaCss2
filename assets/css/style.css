@@ -117,6 +117,34 @@ body {
   color: white;
 }
 
+.precios {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: strecht;
+}
+
+.precio {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: strecht;
+  width: 200px;
+  color: white;
+  margin: 10px 0px;
+  padding: 25px;
+  border: 2px solid #fff;
+  min-height: 300px;
+}
+.precio h4 {
+  margin: 10px 0px;
+  font-size: 24px;
+}
+.precio p {
+  margin: 15px 0px;
+}
 .footer {
   background-color: black;
 }
@@ -146,34 +174,6 @@ body {
   .footer .infoEmpresa p {
     text-align: start;
   }
-}
-.precios {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: strecht;
-}
-
-.precio {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: strecht;
-  width: 200px;
-  color: white;
-  margin: 10px 0px;
-  padding: 25px;
-  border: 2px solid #fff;
-  min-height: 300px;
-}
-.precio h4 {
-  margin: 10px 0px;
-  font-size: 24px;
-}
-.precio p {
-  margin: 15px 0px;
 }
 form {
   display: flex;

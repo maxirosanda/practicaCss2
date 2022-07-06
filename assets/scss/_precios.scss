@@ -1,0 +1,23 @@
+.precios{
+    @include flexbox(row,wrap,space-around,strecht);
+
+}
+.precio{
+    @include flexbox(column,nowrap,space-around,strecht);
+    width: 200px;
+    color: white;
+    margin: 10px 0px;
+    padding: 25px;
+    border: 2px solid #fff;
+    min-height: 300px;
+    h4{
+        margin: 10px 0px;
+        font-size: 24px;
+    }
+    p{
+        margin: 15px 0px;
+    }
+    button{
+        @extend .button;
+    }
+}
