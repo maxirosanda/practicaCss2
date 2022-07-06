@@ -38,6 +38,7 @@ body{
 }
 form{
     @include flexbox(column,nowrap,start,strecht);
+    margin-bottom: 20px;
     h2{
         color: white;
         font-size: 32px;
@@ -66,8 +67,7 @@ form{
     }
     
     .mensaje{
-        display: flex;
-        flex-direction: column;
+        @include flexbox(column,nowrap,start,strecht);
         padding: 25px;
         textarea{
             @extend .ingresoDatos;

@@ -1,15 +1,24 @@
 
+$nav :(
+    fondo: rgb(0, 0, 0),
+    display:flex,
+    listaEstilo:none,
+    liPadding:10px,
+    aTextDecoration:none,
+    aColor:white,
+    afontSize:24px,
+);
 .nav{
-    background-color: black;
-    display: flex;
+    background-color: map-get($nav , fondo );
+    display:map-get($nav , display );
     ul{
-        list-style: none;
+        list-style: map-get($nav , listaEstilo );
         li{
-            padding: 10px;
+            padding: map-get($nav , liPadding );
             a{
-                text-decoration: none;
-                color: white;
-                font-size: 24px;
+                text-decoration: map-get($nav , aTextDecoration );
+                color: map-get($nav , aColor );
+                font-size: map-get($nav , afontSize );
             }
         }
     }
