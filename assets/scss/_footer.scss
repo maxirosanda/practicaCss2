@@ -1,0 +1,19 @@
+.footer{
+    background-color: black;
+    .infoEmpresa{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        p{
+            color: white;
+            padding: 32px;
+        }
+    }
+    .contactosFooter{
+        @extend .contactos;
+        color:white;
+        justify-content: start;
+        padding-left: 32px;
+
+    }
+}

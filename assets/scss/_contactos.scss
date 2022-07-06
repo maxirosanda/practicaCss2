@@ -1,0 +1,29 @@
+.contactos{
+    font-size: 20px;
+    color: white;
+    .datos{
+        display: flex;
+        justify-content: center;
+        margin:15px 0px;
+        .tel{
+            margin: 0px 5px;
+        }
+        }
+    .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0px ;
+         i{
+            padding: 5px;
+           }
+        
+    }
+}
+
+@media(min-width:768px){
+    .contactos{
+        display: flex;
+        justify-content: space-around;
+    }
+}
